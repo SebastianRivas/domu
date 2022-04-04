@@ -7,7 +7,6 @@ import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
 
 const form = useForm({
-    name: '',
     email: '',
     password: '',
     password_confirmation: '',
@@ -28,11 +27,6 @@ const submit = () => {
         <BreezeValidationErrors class="mb-4" />
 
         <form @submit.prevent="submit">
-            <div>
-                <BreezeLabel for="name" value="Name" />
-                <BreezeInput id="name" type="text" class="mt-1 block w-full" v-model="form.name" required autofocus autocomplete="name" />
-            </div>
-
             <div class="mt-4">
                 <BreezeLabel for="email" value="Email" />
                 <BreezeInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autocomplete="username" />

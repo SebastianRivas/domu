@@ -24112,7 +24112,6 @@ __webpack_require__.r(__webpack_exports__);
     var expose = _ref.expose;
     expose();
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_5__.useForm)({
-      name: '',
       email: '',
       password: '',
       password_confirmation: '',
@@ -25278,23 +25277,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         "class": "mb-4"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
         onSubmit: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)($setup.submit, ["prevent"])
-      }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeLabel"], {
-        "for": "name",
-        value: "Name"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeInput"], {
-        id: "name",
-        type: "text",
-        "class": "mt-1 block w-full",
-        modelValue: $setup.form.name,
-        "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-          return $setup.form.name = $event;
-        }),
-        required: "",
-        autofocus: "",
-        autocomplete: "name"
-      }, null, 8
-      /* PROPS */
-      , ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeLabel"], {
+      }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeLabel"], {
         "for": "email",
         value: "Email"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["BreezeInput"], {
@@ -25302,7 +25285,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         type: "email",
         "class": "mt-1 block w-full",
         modelValue: $setup.form.email,
-        "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+        "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
           return $setup.form.email = $event;
         }),
         required: "",
@@ -25317,7 +25300,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         type: "password",
         "class": "mt-1 block w-full",
         modelValue: $setup.form.password,
-        "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+        "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
           return $setup.form.password = $event;
         }),
         required: "",
@@ -25332,7 +25315,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         type: "password",
         "class": "mt-1 block w-full",
         modelValue: $setup.form.password_confirmation,
-        "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+        "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
           return $setup.form.password_confirmation = $event;
         }),
         required: "",
