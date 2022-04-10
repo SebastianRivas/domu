@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('property_photos', function (Blueprint $table) {
+        Schema::create('identification_types', function (Blueprint $table) {
             $table->id();
-            $table->integer('property_id');
+            $table->string('name');
+            $table->string('description');
             $table->timestamps();
-
-            $table->foreign('property_id')->references('id')->on('properties');
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('property_photos');
+        Schema::dropIfExists('identification_types');
     }
 };
