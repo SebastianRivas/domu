@@ -19,13 +19,23 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
     ]);
-});
+})->name('welcome');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/profile', function () {
+    return Inertia::render('Profile');
+})->middleware(['auth', 'verified'])->name('profile');
+
+Route::get('/masterTables', function () {
+    return Inertia::render('MasterTables');
+})->middleware(['auth', 'verified'])->name('masterTables');
+
+Route::get('/properties', function () {
+    return Inertia::render('Properties');
+})->middleware(['auth', 'verified'])->name('properties');
 
 require __DIR__.'/auth.php';

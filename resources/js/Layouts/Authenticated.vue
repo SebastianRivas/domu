@@ -30,12 +30,6 @@ const showingNavigationDropdown = ref(false);
                                 <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </BreezeNavLink>
-                                <BreezeNavLink>
-                                    Sellers
-                                </BreezeNavLink>
-                                 <BreezeNavLink>
-                                    Contracts
-                                </BreezeNavLink>
                             </div>
                         </div>
 
@@ -58,6 +52,9 @@ const showingNavigationDropdown = ref(false);
                                     <template #content>
                                         <BreezeDropdownLink :href="route('logout')" method="post" as="button">
                                             Log Out
+                                        </BreezeDropdownLink>
+                                        <BreezeDropdownLink :href="route('profile')" method="get" as="button">
+                                            Profile
                                         </BreezeDropdownLink>
                                     </template>
                                 </BreezeDropdown>
@@ -94,6 +91,9 @@ const showingNavigationDropdown = ref(false);
                         <div class="mt-3 space-y-1">
                             <BreezeResponsiveNavLink :href="route('logout')" method="post" as="button">
                                 Log Out
+                            </BreezeResponsiveNavLink>
+                            <BreezeResponsiveNavLink :href="route('profile')" method="get" as="button">
+                                Profile
                             </BreezeResponsiveNavLink>
                         </div>
                     </div>
