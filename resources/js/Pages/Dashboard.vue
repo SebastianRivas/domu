@@ -20,22 +20,22 @@ import { Head } from '@inertiajs/inertia-vue3';
                     <div class="p-6 bg-white border-b border-gray-200">
                         <div class="grid grid-cols-4 gap-4">
                             <div>
-                                <CardVueComponent title="User Administration">
+                                <CardVueComponent title="User Administration" :href="route('users')">
                                     
                                 </CardVueComponent>
                             </div>
                             <div>
-                                <CardVueComponent title="Master Table Administration">
+                                <CardVueComponent title="Master Table Administration" :href="route('masterTables')">
                                     
                                 </CardVueComponent>
                             </div>
                             <div>
-                                <CardVueComponent title="Purchaser Administration">
+                                <CardVueComponent title="Purchaser Administration" :href="route('purchaser')">
                                     
                                 </CardVueComponent>
                             </div>
                              <div>
-                                <CardVueComponent title="Property Management">
+                                <CardVueComponent title="Property Management" :href="route('properties')">
                                     
                                 </CardVueComponent>
                             </div>
