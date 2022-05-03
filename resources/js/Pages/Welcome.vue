@@ -21,7 +21,7 @@ defineProps({
         <nav class="py-8 bg-white">
             <div class="md:container px-4 md:px-0 mx-auto flex justify-between">
             <Link :href="route('welcome')">
-                <BreezeApplicationLogo class="block h-9 w-auto" />
+                <BreezeApplicationLogo class="block h-20 w-auto" />
             </Link>
             <div class="space-y-1.5 cursor-pointer">
                 <BreezeDropdown align="right" width="48">

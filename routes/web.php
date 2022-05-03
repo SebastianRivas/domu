@@ -38,4 +38,12 @@ Route::get('/properties', function () {
     return Inertia::render('Properties');
 })->middleware(['auth', 'verified'])->name('properties');
 
+Route::get('/users', function () {
+    return Inertia::render('Users');
+})->middleware(['auth', 'verified'])->name('users');
+
+Route::get('/purchaser', function () {
+    return Inertia::render('Purchaser');
+})->middleware(['auth', 'verified'])->name('purchaser');
+
 require __DIR__.'/auth.php';
