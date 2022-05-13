@@ -16,12 +16,12 @@ const showingNavigationDropdown = ref(false);
             <nav class="bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between h-16">
+                    <div class="flex justify-between h-17">
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
                                 <Link :href="route('dashboard')">
-                                    <BreezeApplicationLogo class="block h-20 w-auto" />
+                                    <BreezeApplicationLogo class="block h-40 w-auto" />
                                 </Link>
                             </div>
 

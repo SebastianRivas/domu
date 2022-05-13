@@ -23,4 +23,17 @@ import { Head } from '@inertiajs/inertia-vue3';
             </div>
         </div>
     </BreezeAuthenticatedLayout>
+        <!-- Footer -->
+    <footer class="text-center py-1 bg-neutral-700 text-sm">
+        <p class="mt-4 text-white">
+            Domu Trusted <br />
+            Miami FL <br />
+            <br />
+            Copyright © 2022 Domu Trusted<br />
+            Powered by Neutron Technologies
+            <center>
+                <img src="./NeutronB.png" alt="" class="w-20 h-20">
+            </center>
+        </p>
+    </footer>
 </template>
