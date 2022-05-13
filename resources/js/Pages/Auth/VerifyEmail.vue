@@ -40,7 +40,7 @@ const verificationLinkSent = computed(() => props.status === 'verification-link-
         </form>
     </BreezeGuestLayout>
         <!-- Footer -->
-    <footer class="text-center py-1 bg-gray-700 text-sm">
+    <footer class="text-center py-1 bg-neutral-700 text-sm">
         <p class="mt-4 text-white">
             Domu Trusted <br />
             Miami FL <br />

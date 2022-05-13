@@ -18,9 +18,9 @@ import { Head } from '@inertiajs/inertia-vue3';
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        <div class="grid grid-cols-4 gap-4">
+                        <div class="md:flex md:justify-between gap-6">
                             <div>
-                                <CardVueComponent title="User Administration" :href="route('users')">
+                                <CardVueComponent title="User - Administration" :href="route('users')">
                                     
                                 </CardVueComponent>
                             </div>
@@ -46,7 +46,7 @@ import { Head } from '@inertiajs/inertia-vue3';
         </div>
     </BreezeAuthenticatedLayout>
         <!-- Footer -->
-    <footer class="text-center py-1 bg-gray-700 text-sm">
+    <footer class="text-center py-1 bg-neutral-700 text-sm">
         <p class="mt-4 text-white">
             Domu Trusted <br />
             Miami FL <br />

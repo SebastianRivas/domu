@@ -18,7 +18,7 @@ import { Head } from '@inertiajs/inertia-vue3';
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div class="mx-auto container max-w-2xl md:w-3/4 shadow-md">
-                        <div class="bg-gray-100 p-4 border-t-2 bg-opacity-5 border-indigo-400 rounded-t">
+                        <div class="bg-gray-100 p-4 border-t-2 bg-opacity-5 border-yellow-600 rounded-t">
                             <div class="max-w-sm mx-auto md:w-full md:mx-0">
                                 <div class="inline-flex items-center space-x-4">
                                     <h1 class="text-gray-600"> name </h1>
@@ -49,7 +49,7 @@ import { Head } from '@inertiajs/inertia-vue3';
                             </div>
                             <input
                             type="email"
-                            class="w-11/12 focus:outline-none focus:text-gray-600 p-2"
+                            class="w-11/12 border-gray-300 focus:border-yellow-600 focus:ring focus:ring-yellow-500 focus:outline-none focus:text-gray-600 p-2"
                             disabled
                             />
                             </div>
@@ -80,7 +80,7 @@ import { Head } from '@inertiajs/inertia-vue3';
                             </div>
                             <input
                             type="text"
-                            class="w-11/12 focus:outline-none focus:text-gray-600 p-2"
+                            class="w-11/12 border-gray-300 focus:border-yellow-600 focus:ring focus:ring-yellow-500 focus:outline-none focus:text-gray-600 p-2"
                             />
                             </div>
                             </div>
@@ -104,7 +104,7 @@ import { Head } from '@inertiajs/inertia-vue3';
                             </div>
                             <input
                             type="text"
-                            class="w-11/12 focus:outline-none focus:text-gray-600 p-2"
+                            class="w-11/12 border-gray-300 focus:border-yellow-600 focus:ring focus:ring-yellow-500 focus:outline-none focus:text-gray-600 p-2"
                             />
                             </div>
                             </div>
@@ -134,13 +134,13 @@ import { Head } from '@inertiajs/inertia-vue3';
                             </div>
                             <input
                             type="password"
-                            class="w-11/12 focus:outline-none focus:text-gray-600 p-2 ml-4"
+                            class="w-11/12 border-gray-300 focus:border-yellow-600 focus:ring focus:ring-yellow-500 focus:outline-none focus:text-gray-600 p-2 ml-4"
                             />
                             </div>
                             </div>
 
                             <div class="md:w-3/12 text-center md:pl-6">
-                            <button class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-indigo-400 py-2 px-4 inline-flex items-center focus:outline-none md:float-right">
+                            <button class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-yellow-700 hover:bg-yellow-800 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 py-2 px-4 inline-flex items-center focus:outline-none md:float-right">
                             <svg
                             fill="none"
                             class="w-4 text-white mr-2"
@@ -176,7 +176,7 @@ import { Head } from '@inertiajs/inertia-vue3';
     </div>
     </BreezeAuthenticatedLayout>
         <!-- Footer -->
-    <footer class="text-center py-1 bg-gray-700 text-sm">
+    <footer class="text-center py-1 bg-neutral-700 text-sm">
         <p class="mt-4 text-white">
             Domu Trusted <br />
             Miami FL <br />

@@ -23747,7 +23747,7 @@ __webpack_require__.r(__webpack_exports__);
     expose();
     var props = __props;
     var classes = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)(function () {
-      return props.active ? 'inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition  duration-150 ease-in-out' : 'inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out';
+      return props.active ? 'inline-flex items-center px-1 pt-1 border-b-2 border-yellow-400 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-yellow-700 transition  duration-150 ease-in-out' : 'inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out';
     });
     var __returned__ = {
       props: props,
@@ -24612,7 +24612,7 @@ var _hoisted_1 = ["type"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
     type: $props.type,
-    "class": "inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150"
+    "class": "inline-flex items-center px-4 py-2 bg-neutral-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-neutral-700 active:bg-neutral-900 focus:outline-none focus:border-neutral-900 focus:shadow-outline-neutral transition ease-in-out duration-150"
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")], 8
   /* PROPS */
   , _hoisted_1);
@@ -24634,7 +24634,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+  "class": "max-w-sm bg-white rounded-lg border border-neutral-200 shadow-md dark:bg-neutral-800 dark:border-neutral-700"
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -24649,10 +24649,10 @@ var _hoisted_3 = {
   "class": "p-5"
 };
 var _hoisted_4 = {
-  "class": "mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+  "class": "mb-2 text-2xl font-bold tracking-tight text-neutral-900 dark:text-white"
 };
 var _hoisted_5 = {
-  "class": "mb-3 font-normal text-gray-700 dark:text-gray-400"
+  "class": "mb-3 font-normal text-neutral-700 dark:text-neutral-400"
 };
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Go ");
@@ -24699,7 +24699,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
     href: $props.href,
-    "class": "inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    "class": "inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-yellow-700 rounded-lg hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_6, _hoisted_7];
@@ -24735,7 +24735,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
       return $setup.proxyChecked = $event;
     }),
-    "class": "rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+    "class": "rounded border-gray-300 text-yellow-600 shadow-sm focus:border-yellow-300 focus:ring focus:ring-yellow-200 focus:ring-opacity-50"
   }, null, 8
   /* PROPS */
   , _hoisted_1)), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $setup.proxyChecked]]);
@@ -24848,7 +24848,7 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = ["value"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("input", {
-    "class": "border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm",
+    "class": "border-gray-300 focus:border-yellow-700 focus:ring focus:ring-yellow-600 focus:ring-opacity-50 rounded-md shadow-sm",
     value: $props.modelValue,
     onInput: _cache[0] || (_cache[0] = function ($event) {
       return _ctx.$emit('update:modelValue', $event.target.value);
@@ -25317,7 +25317,7 @@ var _hoisted_3 = {
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Confirm ");
 
 var _hoisted_5 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_6 = {
   "class": "mt-4 text-white"
@@ -25451,7 +25451,7 @@ var _hoisted_4 = {
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Email Password Reset Link ");
 
 var _hoisted_6 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_7 = {
   "class": "mt-4 text-white"
@@ -25598,7 +25598,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Log in ");
 
 var _hoisted_10 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_11 = {
   "class": "mt-4 text-white"
@@ -25770,7 +25770,7 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register ");
 
 var _hoisted_8 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_9 = {
   "class": "mt-4 text-white"
@@ -25940,7 +25940,7 @@ var _hoisted_4 = {
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Reset Password ");
 
 var _hoisted_6 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_7 = {
   "class": "mt-4 text-white"
@@ -26106,7 +26106,7 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Log Out");
 
 var _hoisted_7 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_8 = {
   "class": "mt-4 text-white"
@@ -26237,10 +26237,10 @@ var _hoisted_5 = {
   "class": "p-6 bg-white border-b border-gray-200"
 };
 var _hoisted_6 = {
-  "class": "grid grid-cols-4 gap-4"
+  "class": "md:flex md:justify-between gap-6"
 };
 var _hoisted_7 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_8 = {
   "class": "mt-4 text-white"
@@ -26289,7 +26289,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["CardVueComponent"], {
-        title: "User Administration",
+        title: "User - Administration",
         href: _ctx.route('users')
       }, null, 8
       /* PROPS */
@@ -26362,7 +26362,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_3 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_4 = {
   "class": "mt-4 text-white"
@@ -26462,7 +26462,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "mx-auto container max-w-2xl md:w-3/4 shadow-md"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "bg-gray-100 p-4 border-t-2 bg-opacity-5 border-indigo-400 rounded-t"
+  "class": "bg-gray-100 p-4 border-t-2 bg-opacity-5 border-yellow-600 rounded-t"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "max-w-sm mx-auto md:w-full md:mx-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -26495,7 +26495,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   d: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
 })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "email",
-  "class": "w-11/12 focus:outline-none focus:text-gray-600 p-2",
+  "class": "w-11/12 border-gray-300 focus:border-yellow-600 focus:ring focus:ring-yellow-500 focus:outline-none focus:text-gray-600 p-2",
   disabled: ""
 })])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "md:inline-flex space-y-4 md:space-y-0 w-full p-4 text-gray-500 items-center"
@@ -26521,7 +26521,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   d: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
 })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "text",
-  "class": "w-11/12 focus:outline-none focus:text-gray-600 p-2"
+  "class": "w-11/12 border-gray-300 focus:border-yellow-600 focus:ring focus:ring-yellow-500 focus:outline-none focus:text-gray-600 p-2"
 })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "text-sm text-gray-400"
 }, "Phone number"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -26540,7 +26540,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   d: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
 })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "text",
-  "class": "w-11/12 focus:outline-none focus:text-gray-600 p-2"
+  "class": "w-11/12 border-gray-300 focus:border-yellow-600 focus:ring focus:ring-yellow-500 focus:outline-none focus:text-gray-600 p-2"
 })])])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "md:inline-flex w-full space-y-4 md:space-y-0 p-8 text-gray-500 items-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
@@ -26563,11 +26563,11 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   d: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
 })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "password",
-  "class": "w-11/12 focus:outline-none focus:text-gray-600 p-2 ml-4"
+  "class": "w-11/12 border-gray-300 focus:border-yellow-600 focus:ring focus:ring-yellow-500 focus:outline-none focus:text-gray-600 p-2 ml-4"
 })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "md:w-3/12 text-center md:pl-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "text-white w-full mx-auto max-w-sm rounded-md text-center bg-indigo-400 py-2 px-4 inline-flex items-center focus:outline-none md:float-right"
+  "class": "text-white w-full mx-auto max-w-sm rounded-md text-center bg-yellow-700 hover:bg-yellow-800 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 py-2 px-4 inline-flex items-center focus:outline-none md:float-right"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   fill: "none",
   "class": "w-4 text-white mr-2",
@@ -26597,7 +26597,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_3 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_4 = {
   "class": "mt-4 text-white"
@@ -26699,7 +26699,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_3 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_4 = {
   "class": "mt-4 text-white"
@@ -26801,7 +26801,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_3 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_4 = {
   "class": "mt-4 text-white"
@@ -26903,7 +26903,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_3 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_4 = {
   "class": "mt-4 text-white"
@@ -27023,10 +27023,10 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 
 var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register ");
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"bg-stone-900 py-14\"><h1 class=\"mt-8 text-center text-5xl text-yellow-600 font-bold\">Welcome to Domu Trusted.</h1><!-- Box --><div class=\"md:flex md:justify-center md:space-x-8 md:px-14\"><!-- box-1 --><div class=\"mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0\"><div class=\"w-sm\"><img class=\"w-64\" src=\"https://images01.nicepage.com/c461c07a441a5d220e8feb1a/a17abde8d83650a582a28432/users-with-speech-bubbles-vector_53876-82250.jpg\" alt=\"\"><div class=\"mt-4 text-yellow-600 text-center\"><h1 class=\"text-xl font-bold\">History</h1><p class=\"mt-4 text-gray-600\">Pretium lectus quam id leo in vitae turpis. Mattis pellentesque id nibh tortor id.</p><button class=\"mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200\">MORE</button></div></div></div><!-- box-2 --><div class=\"mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0\"><div class=\"w-sm\"><img class=\"w-64\" src=\"https://images01.nicepage.com/c461c07a441a5d220e8feb1a/3b242447f922540fbe750cab/fdf.jpg\" alt=\"\"><div class=\"mt-4 text-yellow-600 text-center\"><h1 class=\"text-xl font-bold\">Mission</h1><p class=\"mt-4 text-gray-600\">Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Risus feugiat.</p><button class=\"mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200\">MORE</button></div></div></div><!-- box-3 --><div class=\"mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0\"><div class=\"w-sm\"><img class=\"w-64\" src=\"https://images01.nicepage.com/c461c07a441a5d220e8feb1a/8cc47b39e719570b996d9879/dsds.jpg\" alt=\"\"><div class=\"mt-4 text-yellow-600 text-center\"><h1 class=\"text-xl font-bold\">Contact Us</h1><p class=\"mt-4 text-gray-600\">Nisl purus in mollis nunc sed id semper. Rhoncus aenean vel elit scelerisque mauris.</p><button class=\"mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200\">MORE</button></div></div></div></div></div>", 1);
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"bg-neutral-900 py-14\"><h1 class=\"mt-8 text-center text-5xl text-yellow-600 font-bold\">Welcome to Domu Trusted.</h1><!-- Box --><div class=\"md:flex md:justify-center md:space-x-8 md:px-14\"><!-- box-1 --><div class=\"mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0\"><div class=\"w-sm\"><img class=\"w-64\" src=\"https://images01.nicepage.com/c461c07a441a5d220e8feb1a/a17abde8d83650a582a28432/users-with-speech-bubbles-vector_53876-82250.jpg\" alt=\"\"><div class=\"mt-4 text-yellow-600 text-center\"><h1 class=\"text-xl font-bold\">History</h1><p class=\"mt-4 text-gray-600\">Pretium lectus quam id leo in vitae turpis. Mattis pellentesque id nibh tortor id.</p><button class=\"mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200\">MORE</button></div></div></div><!-- box-2 --><div class=\"mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0\"><div class=\"w-sm\"><img class=\"w-64\" src=\"https://images01.nicepage.com/c461c07a441a5d220e8feb1a/3b242447f922540fbe750cab/fdf.jpg\" alt=\"\"><div class=\"mt-4 text-yellow-600 text-center\"><h1 class=\"text-xl font-bold\">Mission</h1><p class=\"mt-4 text-gray-600\">Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Risus feugiat.</p><button class=\"mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200\">MORE</button></div></div></div><!-- box-3 --><div class=\"mt-16 py-4 px-4 bg-whit w-72 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-500 mx-auto md:mx-0\"><div class=\"w-sm\"><img class=\"w-64\" src=\"https://images01.nicepage.com/c461c07a441a5d220e8feb1a/8cc47b39e719570b996d9879/dsds.jpg\" alt=\"\"><div class=\"mt-4 text-yellow-600 text-center\"><h1 class=\"text-xl font-bold\">Contact Us</h1><p class=\"mt-4 text-gray-600\">Nisl purus in mollis nunc sed id semper. Rhoncus aenean vel elit scelerisque mauris.</p><button class=\"mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200\">MORE</button></div></div></div></div></div>", 1);
 
 var _hoisted_10 = {
-  "class": "text-center py-1 bg-gray-700 text-sm"
+  "class": "text-center py-1 bg-neutral-700 text-sm"
 };
 var _hoisted_11 = {
   "class": "mt-4 text-white"

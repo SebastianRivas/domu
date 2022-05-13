@@ -58,7 +58,7 @@ defineProps({
         </nav>
 
         <!-- Section Hero -->
-        <div class="bg-stone-900 py-14">
+        <div class="bg-neutral-900 py-14">
             <h1 class="mt-8 text-center text-5xl text-yellow-600 font-bold">Welcome to Domu Trusted.</h1>
 
             <!-- Box -->
@@ -103,7 +103,7 @@ defineProps({
     </header>
 
             <!-- Footer -->
-    <footer class="text-center py-1 bg-gray-700 text-sm">
+    <footer class="text-center py-1 bg-neutral-700 text-sm">
         <p class="mt-4 text-white">
             Domu Trusted <br />
             Miami FL <br />
