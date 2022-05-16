@@ -806,6 +806,9 @@ select {
 .w-60 {
   width: 15rem;
 }
+.w-40 {
+  width: 10rem;
+}
 .w-1\/12 {
   width: 8.333333%;
 }

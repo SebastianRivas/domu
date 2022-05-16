@@ -70,11 +70,11 @@ const submit = () => {
             Domu Trusted <br />
             Miami FL <br />
             <br />
+            <center>
+                <img src="./NeutronB.png" alt="" class="w-40 h-40">
+            </center>
             Copyright © 2022 Domu Trusted<br />
             Powered by Neutron Technologies
-            <center>
-                <img src="./NeutronB.png" alt="" class="w-20 h-20">
-            </center>
         </p>
     </footer>
 </template>

@@ -21,7 +21,7 @@ import { Head } from '@inertiajs/inertia-vue3';
                         <div class="bg-gray-100 p-4 border-t-2 bg-opacity-5 border-yellow-600 rounded-t">
                             <div class="max-w-sm mx-auto md:w-full md:mx-0">
                                 <div class="inline-flex items-center space-x-4">
-                                    <h1 class="text-gray-600"> name </h1>
+                                    <h1 class="text-gray-600 font-semibold"> Full Name </h1>
                                 </div>
                             </div>
                         </div>
@@ -181,11 +181,11 @@ import { Head } from '@inertiajs/inertia-vue3';
             Domu Trusted <br />
             Miami FL <br />
             <br />
+            <center>
+                <img src="./NeutronB.png" alt="" class="w-40 h-40">
+            </center>
             Copyright © 2022 Domu Trusted<br />
             Powered by Neutron Technologies
-            <center>
-                <img src="./NeutronB.png" alt="" class="w-20 h-20">
-            </center>
         </p>
     </footer>
 </template>

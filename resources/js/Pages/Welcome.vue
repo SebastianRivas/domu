@@ -59,7 +59,7 @@ defineProps({
 
         <!-- Section Hero -->
         <div class="bg-neutral-900 py-14">
-            <h1 class="mt-8 text-center text-5xl text-yellow-600 font-bold">Welcome to Domu Trusted.</h1>
+            <h1 class="mt-8 text-center text-5xl text-yellow-600 font-bold">Welcome to Domu Trusted</h1>
 
             <!-- Box -->
             <div class="md:flex md:justify-center md:space-x-8 md:px-14">
@@ -108,11 +108,11 @@ defineProps({
             Domu Trusted <br />
             Miami FL <br />
             <br />
+            <center>
+                <img src="./NeutronB.png" alt="" class="w-40 h-40">
+            </center>
             Copyright © 2022 Domu Trusted<br />
             Powered by Neutron Technologies
-            <center>
-                <img src="./NeutronB.png" alt="" class="w-20 h-20">
-            </center>
         </p>
     </footer>
 </template>
