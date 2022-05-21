@@ -4,6 +4,11 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ContractController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,28 +27,28 @@ Route::get('/', function () {
     ]);
 })->name('welcome');
 
-Route::get('/dashboard', function () {
+Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/profile', function () {
-    return Inertia::render('Profile');
-})->middleware(['auth', 'verified'])->name('profile');
+Route::get('profile', 
+    [ProfileController::class, 'index']
+)->middleware(['auth', 'verified'])->name('profile');
 
-Route::get('/masterTables', function () {
+Route::get('masterTables', function () {
     return Inertia::render('MasterTables');
 })->middleware(['auth', 'verified'])->name('masterTables');
 
-Route::get('/properties', function () {
-    return Inertia::render('Properties');
-})->middleware(['auth', 'verified'])->name('properties');
+Route::get('properties', 
+    [PropertyController::class, 'index']
+)->middleware(['auth', 'verified'])->name('properties');
 
-Route::get('/users', function () {
-    return Inertia::render('Users');
-})->middleware(['auth', 'verified'])->name('users');
+Route::get('users', 
+    [UserController::class, 'index']
+)->middleware(['auth', 'verified'])->name('users');
 
-Route::get('/purchaser', function () {
-    return Inertia::render('Purchaser');
-})->middleware(['auth', 'verified'])->name('purchaser');
+Route::get('purchaser', 
+    [ContractController::class, 'index']
+)->middleware(['auth', 'verified'])->name('purchaser');
 
 require __DIR__.'/auth.php';

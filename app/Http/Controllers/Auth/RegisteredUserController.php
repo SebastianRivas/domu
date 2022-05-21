@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -11,6 +10,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Inertia\Inertia;
+
+use App\Models\User;
+use App\Models\Profiles;
 
 class RegisteredUserController extends Controller
 {
@@ -48,6 +50,16 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
+
+        $profile = Profiles::create([
+            'user_id' => Auth::id(), 
+            'identification_type' => 1, 
+            'identification_number' => 0, 
+            'first_name' => '', 
+            'last_name' => '', 
+            'phone_number' => '',
+            'age' => 0,
+        ]);
 
         return redirect(RouteServiceProvider::HOME);
     }

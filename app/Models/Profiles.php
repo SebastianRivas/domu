@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class IdentificationTypes extends Model
+class Profiles extends Model
 {
     use HasFactory;
 
@@ -15,8 +15,12 @@ class IdentificationTypes extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'description',
+        'user_id', 
+        'identification_type', 
+        'identification_number', 
+        'first_name', 
+        'last_name', 
+        'age',
     ];
 
     /**
