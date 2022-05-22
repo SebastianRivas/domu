@@ -20,8 +20,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $properties = User::all()->toArray();
-        return array_reverse($properties); 
+        $users = User::all();
+        
+        return Inertia::render('Users', [
+            'usersArr' => $users,
+        ]);
     }
 
     /**

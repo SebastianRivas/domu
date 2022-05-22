@@ -1,6 +1,15 @@
 <script setup>
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
 import { Head } from '@inertiajs/inertia-vue3';
+
+defineProps({
+    usersArr: Object,
+})
+
+let usersTableJS = new JSTable("#usersTable", {
+    sortable: true,
+    searchable: true,
+});
 </script>
 
 <template>
@@ -17,7 +26,22 @@ import { Head } from '@inertiajs/inertia-vue3';
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
-                        You're in users module!
+                        <table id="usersTable">
+                            <thead>
+                                <tr>
+                                    <th>user_type</th>
+                                    <th>email</th>
+                                    <th>created_at</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for=" user in usersArr">
+                                    <td> {{ user.user_type }} </td>
+                                    <td> {{ user.email }} </td>
+                                    <td> {{ user.created_at }} </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

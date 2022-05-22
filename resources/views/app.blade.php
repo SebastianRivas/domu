@@ -16,6 +16,10 @@
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
         @inertiaHead
+
+        <!-- Plugins -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/JSTable/dist/jstable.css') }}">
+        <script type="text/javascript" src="{{ asset('plugins/JSTable/dist/jstable.min.js') }}"></script>
     </head>
     <body class="font-sans antialiased">
         @inertia
@@ -28,12 +32,15 @@
             <p class="mt-4 text-white">
                 Domu Trusted <br />
                 Miami FL <br />
-                <br />
+            </p>
+            
+            <div class="flex justify-center items-center">
+                <img src="{{ asset('images/NeutronB.png') }}" alt="Neutron Logo" class="w-40 h-40">
+            </div>
+            
+            <p class="mt-4 text-white">
                 Copyright © 2022 Domu Trusted<br />
                 Powered by Neutron Technologies
-                <div class="flex justify-center items-center">
-                    <img src="{{ asset('images/NeutronB.png') }}" alt="Neutron Logo" class="w-20 h-20">
-                </div>
             </p>
         </footer>
     </body>
