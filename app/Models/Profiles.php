@@ -20,6 +20,7 @@ class Profiles extends Model
         'identification_number', 
         'first_name', 
         'last_name', 
+        'phone_number',
         'age',
     ];
 

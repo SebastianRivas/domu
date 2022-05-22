@@ -4,7 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfilesController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContractController;
@@ -32,7 +32,7 @@ Route::get('dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('profile', 
-    [ProfileController::class, 'index']
+    [ProfilesController::class, 'index']
 )->middleware(['auth', 'verified'])->name('profile');
 
 Route::get('masterTables', function () {

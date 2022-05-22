@@ -11,7 +11,7 @@ use Inertia\Inertia;
 
 use App\Models\Profiles;
 
-class ProfileController extends Controller
+class ProfilesController extends Controller
 {
     /**
      * Display a listing of the resource.
