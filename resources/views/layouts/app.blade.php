@@ -17,8 +17,8 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
 
         <!-- Plugins -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('plugins/JSTable/dist/jstable.css') }}">
-        <script type="text/javascript" src="{{ asset('plugins/JSTable/dist/jstable.min.js') }}"></script>
+        <!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/jstable.css') }}"> -->
+        <!-- <script type="text/javascript" src="{{ asset('js/jstable.min.js') }}"></script> -->
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
