@@ -61,6 +61,6 @@ class RegisteredUserController extends Controller
             'age' => 0,
         ]);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect(RouteServiceProvider::PROFILE);
     }
 }
