@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 
 use App\Models\User;
@@ -20,7 +21,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = DB::table('users')
+            ->join('profiles', 'users.id', '=', 'profiles.user_id')
+            ->join('user_types', 'users.user_type', '=', 'user_types.id')
+            ->select('users.*', 'users.id', 'users.email', 'profiles.first_name', 'profiles.last_name', 'user_types.name')
+            ->get();
         
         return Inertia::render('Users', [
             'usersArr' => $users,

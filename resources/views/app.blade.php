@@ -16,10 +16,6 @@
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
         @inertiaHead
-
-        <!-- Plugins -->
-        <!-- <link rel="stylesheet" type="text/css" href="{{ asset('css/jstable.css') }}"> -->
-        <!-- <script type="text/javascript" src="{{ asset('js/jstable.min.js') }}"></script> -->
     </head>
     <body class="font-sans antialiased">
         @inertia

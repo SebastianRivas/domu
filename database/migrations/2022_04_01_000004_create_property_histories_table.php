@@ -13,15 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contracts', function (Blueprint $table) {
+        Schema::create('property_histories', function (Blueprint $table) {
             $table->id();
             $table->integer('property_id');
-            $table->string('serial');
-            $table->text('url');
+            $table->integer('event_id');
+            $table->text('description');
             $table->date('date');
             $table->timestamps();
 
             $table->foreign('property_id')->references('id')->on('properties');
+            $table->foreign('event_id')->references('id')->on('event_types');
         });
     }
 
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contracts');
+        Schema::dropIfExists('property_histories');
     }
 };

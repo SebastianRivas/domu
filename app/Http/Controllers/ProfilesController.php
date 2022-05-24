@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 
 use App\Models\Profiles;
@@ -20,8 +21,9 @@ class ProfilesController extends Controller
      */
     public function index()
     {
-        $profile = Profiles::where('user_id', '=', Auth::id())->firstOrFail();
-
+        $profile = Profiles::where('user_id', '=', Auth::id())
+            ->firstOrFail();
+            
         return Inertia::render('Profile', [
             'userData' => Auth::user(),
             'profileData' => $profile,

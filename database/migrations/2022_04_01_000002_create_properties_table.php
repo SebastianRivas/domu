@@ -15,16 +15,12 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->integer('owner_id');
-            $table->integer('property_type');
-            $table->integer('property_detail');
-            $table->integer('property_history');
+            $table->integer('user_id');
+            $table->integer('property_type_id');
             $table->timestamps();
 
-            $table->foreign('owner_id')->references('id')->on('users');
-            $table->foreign('property_type')->references('id')->on('property_types');
-            $table->foreign('property_detail')->references('id')->on('property_details');
-            $table->foreign('property_history')->references('id')->on('property_histories');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('property_type_id')->references('id')->on('property_types');
         });
     }
 

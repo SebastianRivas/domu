@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 
 use App\Models\Contract;
@@ -20,8 +21,17 @@ class ContractController extends Controller
      */
     public function index()
     {
-        $contracts = Contract::all()->toArray();
-        return array_reverse($contracts); 
+        $contracts = DB::table('contracts')
+            ->join('properties', 'contracts.property_id', '=', 'properties.id')
+            ->join('property_details', 'properties.id', '=', 'property_details.property_id')
+            ->join('profiles', 'properties.user_id', '=', 'profiles.user_id')
+            ->select('contracts.*', 'property_details.name', 'contracts.serial', 'contracts.date', 'profiles.first_name', 'profiles.last_name')
+            ->get();
+
+            
+        return Inertia::render('Purchaser', [
+            'contractsArr' => $contracts,
+        ]);
     }
 
     /**

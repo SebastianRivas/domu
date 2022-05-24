@@ -13,12 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contracts', function (Blueprint $table) {
+        Schema::create('property_details', function (Blueprint $table) {
             $table->id();
             $table->integer('property_id');
-            $table->string('serial');
-            $table->text('url');
-            $table->date('date');
+            $table->string('name');
+            $table->text('description');
+            $table->float('price');
+            $table->integer('room');
+            $table->integer('bath');
+            $table->float('area');
+            $table->integer('garaje');
+            $table->date('year_build');
+            $table->text('location');
             $table->timestamps();
 
             $table->foreign('property_id')->references('id')->on('properties');
@@ -32,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contracts');
+        Schema::dropIfExists('property_details');
     }
 };

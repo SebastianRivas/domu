@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 
 use App\Models\Property;
@@ -20,8 +21,11 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        $properties = Property::all()->toArray();
-        return array_reverse($properties); 
+        $properties = Property::all();
+
+        return Inertia::render('Properties', [
+            'propertiesArr' => $properties,
+        ]);
     }
 
     /**
