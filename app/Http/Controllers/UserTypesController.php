@@ -20,8 +20,11 @@ class UserTypesController extends Controller
      */
     public function index()
     {
-        $userTypes = UserTypes::all()->toArray();
-        return array_reverse($userTypes); 
+        $userTypes = UserTypes::all();
+
+        return Inertia::render('', [
+            'userTypesArr' => $userTypes,
+        ]);
     }
 
     /**
@@ -31,7 +34,7 @@ class UserTypesController extends Controller
      */
     public function create()
     {
-        //
+        print_r("create");
     }
 
     /**
@@ -42,7 +45,7 @@ class UserTypesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        print_r("store" . $request);
     }
 
     /**
@@ -51,9 +54,9 @@ class UserTypesController extends Controller
      * @param  Integer  $userTypeId
      * @return \Illuminate\Http\Response
      */
-    public function show(Integer $userTypeId)
+    public function show($userTypeId)
     {
-        //
+        print_r("show" . $userTypeId);
     }
 
     /**
@@ -62,9 +65,9 @@ class UserTypesController extends Controller
      * @param  Integer  $userTypeId
      * @return \Illuminate\Http\Response
      */
-    public function edit(Integer $userTypeId)
+    public function edit($userTypeId)
     {
-        //
+        print_r("edit" . $userTypeId);
     }
 
     /**
@@ -74,9 +77,9 @@ class UserTypesController extends Controller
      * @param  Integer  $userTypeId
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Integer $userTypeId)
+    public function update(Request $request, $userTypeId)
     {
-        //
+        print_r("update" . $request . $userTypeId);
     }
 
     /**
@@ -85,8 +88,8 @@ class UserTypesController extends Controller
      * @param  Integer $userTypeId
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Integer $userTypeId)
+    public function destroy($userTypeId)
     {
-        //
+        print_r("destroy" . $userTypeId);
     }
 }

@@ -25,10 +25,10 @@ class ContractController extends Controller
             ->join('properties', 'contracts.property_id', '=', 'properties.id')
             ->join('property_details', 'properties.id', '=', 'property_details.property_id')
             ->join('profiles', 'properties.user_id', '=', 'profiles.user_id')
-            ->select('contracts.*', 'property_details.name', 'contracts.serial', 'contracts.date', 'profiles.first_name', 'profiles.last_name')
-            ->get();
+            ->orderBy('contracts.created_at', 'asc')
+            ->select('contracts.id as contract_id', 'property_details.name as property_name', 'contracts.serial as contract_serial', 'contracts.date as contract_date', 'profiles.first_name as user_first_name', 'profiles.last_name as user_last_name')
+            ->paginate(10);
 
-            
         return Inertia::render('Purchaser', [
             'contractsArr' => $contracts,
         ]);
@@ -41,7 +41,7 @@ class ContractController extends Controller
      */
     public function create()
     {
-        //
+        print_r("create");
     }
 
     /**
@@ -52,7 +52,7 @@ class ContractController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        print_r("store" . $request);
     }
 
     /**
@@ -61,9 +61,9 @@ class ContractController extends Controller
      * @param  Integer  $propertyId
      * @return \Illuminate\Http\Response
      */
-    public function show(Integer $propertyId)
+    public function show($propertyId)
     {
-        //
+        print_r("show" . $propertyId);
     }
 
     /**
@@ -72,9 +72,9 @@ class ContractController extends Controller
      * @param  Integer  $propertyId
      * @return \Illuminate\Http\Response
      */
-    public function edit(Integer $propertyId)
+    public function edit($propertyId)
     {
-        //
+        print_r("edit" . $propertyId);
     }
 
     /**
@@ -84,9 +84,9 @@ class ContractController extends Controller
      * @param  Integer  $propertyId
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Integer $propertyId)
+    public function update(Request $request, $propertyId)
     {
-        //
+        print_r("update" . $request . $propertyId);
     }
 
     /**
@@ -95,8 +95,8 @@ class ContractController extends Controller
      * @param  Integer $propertyId
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Integer $propertyId)
+    public function destroy($propertyId)
     {
-        //
+        print_r("edit" . $propertyId);
     }
 }

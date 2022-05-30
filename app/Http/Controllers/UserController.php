@@ -24,9 +24,10 @@ class UserController extends Controller
         $users = DB::table('users')
             ->join('profiles', 'users.id', '=', 'profiles.user_id')
             ->join('user_types', 'users.user_type', '=', 'user_types.id')
-            ->select('users.*', 'users.id', 'users.email', 'profiles.first_name', 'profiles.last_name', 'user_types.name')
-            ->get();
-        
+            ->orderBy('users.created_at', 'asc')
+            ->select('users.id as user_id', 'users.email as user_email', 'profiles.first_name as user_first_name', 'profiles.last_name as user_last_name', 'user_types.name as user_type')
+            ->paginate(10);
+
         return Inertia::render('Users', [
             'usersArr' => $users,
         ]);
@@ -39,7 +40,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        print_r("create");
     }
 
     /**
@@ -50,7 +51,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        print_r("store: " . $request);
     }
 
     /**
@@ -59,9 +60,9 @@ class UserController extends Controller
      * @param  Integer  $userId
      * @return \Illuminate\Http\Response
      */
-    public function show(Integer $userId)
+    public function show($userId)
     {
-        //
+        print_r("show" . $userId);
     }
 
     /**
@@ -70,9 +71,9 @@ class UserController extends Controller
      * @param  Integer  $userId
      * @return \Illuminate\Http\Response
      */
-    public function edit(Integer $userId)
+    public function edit($userId)
     {
-        //
+        print_r("edit" . $userId);
     }
 
     /**
@@ -82,9 +83,9 @@ class UserController extends Controller
      * @param  Integer  $userId
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Integer $userId)
+    public function update(Request $request, $userId)
     {
-        //
+        print_r("update" . $request . $userId);
     }
 
     /**
@@ -93,8 +94,8 @@ class UserController extends Controller
      * @param  Integer $userId
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Integer $userId)
+    public function destroy($userId)
     {
-        //
+        print_r("destroy" . $userId);
     }
 }

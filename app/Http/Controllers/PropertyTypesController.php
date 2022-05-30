@@ -20,8 +20,11 @@ class PropertyTypesController extends Controller
      */
     public function index()
     {
-        $propertyTypes = PropertyTypes::all()->toArray();
-        return array_reverse($propertyTypes); 
+        $propertyTypes = PropertyTypes::all();
+
+        return Inertia::render('', [
+            'propertyTypesArr' => $propertyTypes,
+        ]);
     }
 
     /**
@@ -31,7 +34,7 @@ class PropertyTypesController extends Controller
      */
     public function create()
     {
-        //
+        print_r("create");
     }
 
     /**
@@ -42,7 +45,7 @@ class PropertyTypesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        print_r("store" . $request);
     }
 
     /**
@@ -51,9 +54,9 @@ class PropertyTypesController extends Controller
      * @param  Integer  $propertyTypeId
      * @return \Illuminate\Http\Response
      */
-    public function show(Integer $propertyTypeId)
+    public function show($propertyTypeId)
     {
-        //
+        print_r("show" . $propertyTypeId);
     }
 
     /**
@@ -62,9 +65,9 @@ class PropertyTypesController extends Controller
      * @param  Integer  $propertyTypeId
      * @return \Illuminate\Http\Response
      */
-    public function edit(Integer $propertyTypeId)
+    public function edit($propertyTypeId)
     {
-        //
+        print_r("edit" . $propertyTypeId);
     }
 
     /**
@@ -74,9 +77,9 @@ class PropertyTypesController extends Controller
      * @param  Integer  $propertyTypeId
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Integer $propertyTypeId)
+    public function update(Request $request, $propertyTypeId)
     {
-        //
+        print_r("update" . $request . $propertyTypeId);
     }
 
     /**
@@ -85,8 +88,8 @@ class PropertyTypesController extends Controller
      * @param  Integer $propertyTypeId
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Integer $propertyTypeId)
+    public function destroy($propertyTypeId)
     {
-        //
+        print_r("destroy" . $propertyTypeId);
     }
 }

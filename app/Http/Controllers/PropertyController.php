@@ -21,7 +21,12 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        $properties = Property::all();
+        $properties = DB::table('properties')
+            ->join('profiles', 'properties.user_id', '=', 'profiles.user_id')
+            ->join('property_details', 'properties.id', '=', 'property_details.property_id')
+            ->orderBy('properties.created_at', 'asc')
+            ->select('properties.id as property_id', 'property_details.name as property_name', 'property_details.location as property_location', 'profiles.first_name as user_first_name', 'profiles.last_name as user_last_name')
+            ->paginate(10);
 
         return Inertia::render('Properties', [
             'propertiesArr' => $properties,
@@ -35,7 +40,7 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        //
+        print_r("create");
     }
 
     /**
@@ -46,7 +51,7 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        print_r("store" . $request);
     }
 
     /**
@@ -55,9 +60,9 @@ class PropertyController extends Controller
      * @param  Integer  $propertyId
      * @return \Illuminate\Http\Response
      */
-    public function show(Integer $propertyId)
+    public function show($propertyId)
     {
-        //
+        print_r("show" . $propertyId);
     }
 
     /**
@@ -66,9 +71,9 @@ class PropertyController extends Controller
      * @param  Integer  $propertyId
      * @return \Illuminate\Http\Response
      */
-    public function edit(Integer $propertyId)
+    public function edit($propertyId)
     {
-        //
+        print_r("edit" . $propertyId);
     }
 
     /**
@@ -78,9 +83,9 @@ class PropertyController extends Controller
      * @param  Integer  $propertyId
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Integer $propertyId)
+    public function update(Request $request, $propertyId)
     {
-        //
+        print_r("update" . $request . $propertyId);
     }
 
     /**
@@ -89,8 +94,8 @@ class PropertyController extends Controller
      * @param  Integer $propertyId
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Integer $propertyId)
+    public function destroy($propertyId)
     {
-        //
+        print_r("destroy" . $propertyId);
     }
 }

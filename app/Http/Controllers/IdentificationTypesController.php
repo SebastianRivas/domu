@@ -20,8 +20,11 @@ class IdentificationTypesController extends Controller
      */
     public function index()
     {
-        $identificationTypes = IdentificationTypes::all()->toArray();
-        return array_reverse($identificationTypes); 
+        $identificationTypes = IdentificationTypes::all();
+
+        return Inertia::render('', [
+            'identificationTypesArr' => $identificationTypes,
+        ]);
     }
 
     /**
@@ -31,7 +34,7 @@ class IdentificationTypesController extends Controller
      */
     public function create()
     {
-        //
+        print_r("create");
     }
 
     /**
@@ -42,7 +45,7 @@ class IdentificationTypesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        print_r("store" . $request);
     }
 
     /**
@@ -51,9 +54,9 @@ class IdentificationTypesController extends Controller
      * @param  Integer  $identificationTypeId
      * @return \Illuminate\Http\Response
      */
-    public function show(Integer $identificationTypeId)
+    public function show($identificationTypeId)
     {
-        //
+        print_r("show" . $identificationTypeId);
     }
 
     /**
@@ -62,9 +65,9 @@ class IdentificationTypesController extends Controller
      * @param  Integer  $identificationTypeId
      * @return \Illuminate\Http\Response
      */
-    public function edit(Integer $identificationTypeId)
+    public function edit($identificationTypeId)
     {
-        //
+        print_r("edit" . $identificationTypeId);
     }
 
     /**
@@ -74,9 +77,9 @@ class IdentificationTypesController extends Controller
      * @param  Integer  $identificationTypeId
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Integer $identificationTypeId)
+    public function update(Request $request, $identificationTypeId)
     {
-        //
+        print_r("update" . $request . $identificationTypeId);
     }
 
     /**
@@ -85,8 +88,8 @@ class IdentificationTypesController extends Controller
      * @param  Integer $identificationTypeId
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Integer $identificationTypeId)
+    public function destroy($identificationTypeId)
     {
-        //
+        print_r("destroy" . $identificationTypeId);
     }
 }

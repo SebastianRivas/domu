@@ -1,6 +1,7 @@
 <script setup>
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
 import { Head } from '@inertiajs/inertia-vue3';
+import { Link } from '@inertiajs/inertia-vue3';
 
 defineProps({
     userData: Object,
@@ -237,33 +238,37 @@ defineProps({
                                     </div>
 
                                     <div class="md:w-3/12 text-center md:pl-6">
-                                        <button class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-yellow-700 hover:bg-yellow-800 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 py-2 px-4 inline-flex items-center focus:outline-none md:float-right">
-                                        <svg
-                                            fill="none"
-                                            class="w-4 text-white mr-2"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                                        />
-                                        </svg>
-                                        Update
-                                        </button>
+                                        <Link :href="route('profile.update', { user_id: userData.id })">
+                                            <button class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-yellow-700 hover:bg-yellow-800 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 py-2 px-4 inline-flex items-center focus:outline-none md:float-right">
+                                                <svg
+                                                    fill="none"
+                                                    class="w-4 text-white mr-2"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                                                />
+                                                </svg>
+                                                Update
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
 
                                 <hr />
                                 <div class="w-full p-4 text-right text-gray-500">
-                                    <button class="inline-flex items-center focus:outline-none mr-4">
-                                    <svg fill="none" class="w-4 mr-2" viewBox="0 0 24 24" stroke="currentColor" >
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-                                    </svg>
-                                    Delete account
-                                    </button>
+                                    <Link :href="route('profile.destroy', { user_id: userData.id })">
+                                        <button class="inline-flex items-center focus:outline-none mr-4">
+                                            <svg fill="none" class="w-4 mr-2" viewBox="0 0 24 24" stroke="currentColor" >
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                            </svg>
+                                            Delete account
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

@@ -21,8 +21,7 @@ class ProfilesController extends Controller
      */
     public function index()
     {
-        $profile = Profiles::where('user_id', '=', Auth::id())
-            ->firstOrFail();
+        $profile = Profiles::where('user_id', '=', Auth::id())->get();
             
         return Inertia::render('Profile', [
             'userData' => Auth::user(),
@@ -37,7 +36,7 @@ class ProfilesController extends Controller
      */
     public function create()
     {
-        //
+        print_r("create");
     }
 
     /**
@@ -48,7 +47,7 @@ class ProfilesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        print_r("store" . $request);
     }
 
     /**
@@ -57,9 +56,9 @@ class ProfilesController extends Controller
      * @param  Integer  $userId
      * @return \Illuminate\Http\Response
      */
-    public function show(Integer $userId)
+    public function show($userId)
     {
-        //
+        print_r("show" . $userId);
     }
 
     /**
@@ -68,9 +67,9 @@ class ProfilesController extends Controller
      * @param  Integer  $userId
      * @return \Illuminate\Http\Response
      */
-    public function edit(Integer $userId)
+    public function edit($userId)
     {
-        //
+        print_r("edit" . $userId);
     }
 
     /**
@@ -80,9 +79,9 @@ class ProfilesController extends Controller
      * @param  Integer  $userId
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Integer $userId)
+    public function update(Request $request, $userId)
     {
-        //
+        print_r("update" . $request . $userId);
     }
 
     /**
@@ -91,8 +90,8 @@ class ProfilesController extends Controller
      * @param  Integer $userId
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Integer $userId)
+    public function destroy($userId)
     {
-        //
+        print_r("destroy" . $userId);
     }
 }

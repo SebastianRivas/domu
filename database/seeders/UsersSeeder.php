@@ -26,8 +26,8 @@ class UsersSeeder extends Seeder
             'user_id' => 1, 
             'identification_type' => 1, 
             'identification_number' => 0, 
-            'first_name' => 'DOMU', 
-            'last_name' => 'ADMIN', 
+            'first_name' => 'Domu', 
+            'last_name' => 'Trusted', 
             'phone_number' => '+1900000000',
             'age' => 0,
         ]);
