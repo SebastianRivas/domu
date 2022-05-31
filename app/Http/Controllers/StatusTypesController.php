@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-use App\Models\IdentificationTypes;
+use App\Models\StatusTypes;
 
-class IdentificationTypesController extends Controller
+class StatusTypesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,12 +20,12 @@ class IdentificationTypesController extends Controller
      */
     public function index()
     {
-        $identificationTypes = IdentificationTypes::all();
+        $statusTypes = StatusTypes::all();
 
-        print_r("index" . $identificationTypes);
+        print_r("index" . $statusTypes);
 
         // return Inertia::render('', [
-        //     'identificationTypesArr' => $identificationTypes,
+        //     'statusTypesArr' => $statusTypes,
         // ]);
     }
 
@@ -53,45 +53,45 @@ class IdentificationTypesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Integer  $identificationTypeId
+     * @param  Integer  $statusTypeId
      * @return \Illuminate\Http\Response
      */
-    public function show($identificationTypeId)
+    public function show($statusTypeId)
     {
-        print_r("show" . $identificationTypeId);
+        print_r("show" . $statusTypeId);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Integer  $identificationTypeId
+     * @param  Integer  $statusTypeId
      * @return \Illuminate\Http\Response
      */
-    public function edit($identificationTypeId)
+    public function edit($statusTypeId)
     {
-        print_r("edit" . $identificationTypeId);
+        print_r("edit" . $statusTypeId);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  Integer  $identificationTypeId
+     * @param  Integer  $statusTypeId
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $identificationTypeId)
+    public function update(Request $request, $statusTypeId)
     {
-        print_r("update" . $request . $identificationTypeId);
+        print_r("update" . $request . $statusTypeId);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Integer $identificationTypeId
+     * @param  Integer $statusTypeId
      * @return \Illuminate\Http\Response
      */
-    public function destroy($identificationTypeId)
+    public function destroy($statusTypeId)
     {
-        print_r("destroy" . $identificationTypeId);
+        print_r("destroy" . $statusTypeId);
     }
 }

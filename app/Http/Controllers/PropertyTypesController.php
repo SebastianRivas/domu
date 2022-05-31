@@ -22,9 +22,11 @@ class PropertyTypesController extends Controller
     {
         $propertyTypes = PropertyTypes::all();
 
-        return Inertia::render('', [
-            'propertyTypesArr' => $propertyTypes,
-        ]);
+        print_r("index" . $propertyTypes);
+
+        // return Inertia::render('', [
+        //     'propertyTypesArr' => $propertyTypes,
+        // ]);
     }
 
     /**

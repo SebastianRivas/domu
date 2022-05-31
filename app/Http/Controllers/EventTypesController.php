@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-use App\Models\IdentificationTypes;
+use App\Models\EventTypes;
 
-class IdentificationTypesController extends Controller
+class EventTypesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,12 +20,12 @@ class IdentificationTypesController extends Controller
      */
     public function index()
     {
-        $identificationTypes = IdentificationTypes::all();
+        $eventTypes = EventTypes::all();
 
-        print_r("index" . $identificationTypes);
+        print_r("index" . $eventTypes);
 
         // return Inertia::render('', [
-        //     'identificationTypesArr' => $identificationTypes,
+        //     'eventTypesArr' => $eventTypes,
         // ]);
     }
 
@@ -53,45 +53,45 @@ class IdentificationTypesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Integer  $identificationTypeId
+     * @param  Integer  $eventTypeId
      * @return \Illuminate\Http\Response
      */
-    public function show($identificationTypeId)
+    public function show($eventTypeId)
     {
-        print_r("show" . $identificationTypeId);
+        print_r("show" . $eventTypeId);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Integer  $identificationTypeId
+     * @param  Integer  $eventTypeId
      * @return \Illuminate\Http\Response
      */
-    public function edit($identificationTypeId)
+    public function edit($eventTypeId)
     {
-        print_r("edit" . $identificationTypeId);
+        print_r("edit" . $eventTypeId);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  Integer  $identificationTypeId
+     * @param  Integer  $eventTypeId
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $identificationTypeId)
+    public function update(Request $request, $eventTypeId)
     {
-        print_r("update" . $request . $identificationTypeId);
+        print_r("update" . $request . $eventTypeId);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Integer $identificationTypeId
+     * @param  Integer $eventTypeId
      * @return \Illuminate\Http\Response
      */
-    public function destroy($identificationTypeId)
+    public function destroy($eventTypeId)
     {
-        print_r("destroy" . $identificationTypeId);
+        print_r("destroy" . $eventTypeId);
     }
 }

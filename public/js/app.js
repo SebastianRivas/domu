@@ -26112,32 +26112,32 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["CardVueComponent"], {
         title: "Status Types",
-        href: _ctx.route('welcome')
+        href: _ctx.route('masterTables.status')
       }, null, 8
       /* PROPS */
       , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["CardVueComponent"], {
         title: "User Types",
-        href: _ctx.route('welcome')
+        href: _ctx.route('masterTables.users')
       }, null, 8
       /* PROPS */
       , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["CardVueComponent"], {
         title: "Identification Types",
-        href: _ctx.route('welcome')
+        href: _ctx.route('masterTables.identifications')
       }, null, 8
       /* PROPS */
       , ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["CardVueComponent"], {
         title: "Contract Types",
-        href: _ctx.route('welcome')
+        href: _ctx.route('masterTables.contracts')
       }, null, 8
       /* PROPS */
       , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["CardVueComponent"], {
         title: "Property Types",
-        href: _ctx.route('welcome')
+        href: _ctx.route('masterTables.properties')
       }, null, 8
       /* PROPS */
       , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["CardVueComponent"], {
         title: "Event Types",
-        href: _ctx.route('welcome')
+        href: _ctx.route('masterTables.events')
       }, null, 8
       /* PROPS */
       , ["href"])])])])])])];

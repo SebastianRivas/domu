@@ -20,28 +20,28 @@ import { Link } from '@inertiajs/inertia-vue3';
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
                         <div class="md:flex md:justify-center md:space-x-8 md:px-14">
-                            <CardVueComponent title="Status Types" :href="route('welcome')">
+                            <CardVueComponent title="Status Types" :href="route('masterTables.status')">
                                 
                             </CardVueComponent>
 
-                            <CardVueComponent title="User Types" :href="route('welcome')">
+                            <CardVueComponent title="User Types" :href="route('masterTables.users')">
                                 
                             </CardVueComponent>
 
-                            <CardVueComponent title="Identification Types" :href="route('welcome')">
+                            <CardVueComponent title="Identification Types" :href="route('masterTables.identifications')">
                                 
                             </CardVueComponent>
                         </div>
                         <div class="md:flex md:justify-center md:space-x-8 md:px-14">
-                            <CardVueComponent title="Contract Types" :href="route('welcome')">
+                            <CardVueComponent title="Contract Types" :href="route('masterTables.contracts')">
                                 
                             </CardVueComponent>
 
-                            <CardVueComponent title="Property Types" :href="route('welcome')">
+                            <CardVueComponent title="Property Types" :href="route('masterTables.properties')">
                                 
                             </CardVueComponent>
 
-                            <CardVueComponent title="Event Types" :href="route('welcome')">
+                            <CardVueComponent title="Event Types" :href="route('masterTables.events')">
                                 
                             </CardVueComponent>
                         </div>

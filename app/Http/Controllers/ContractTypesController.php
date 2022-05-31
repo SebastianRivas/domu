@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-use App\Models\IdentificationTypes;
+use App\Models\ContractTypes;
 
-class IdentificationTypesController extends Controller
+class ContractTypesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,12 +20,12 @@ class IdentificationTypesController extends Controller
      */
     public function index()
     {
-        $identificationTypes = IdentificationTypes::all();
+        $contractTypes = ContractTypes::all();
 
-        print_r("index" . $identificationTypes);
+        print_r("index" . $contractTypes);
 
         // return Inertia::render('', [
-        //     'identificationTypesArr' => $identificationTypes,
+        //     'contractTypesArr' => $contractTypes,
         // ]);
     }
 
@@ -53,45 +53,45 @@ class IdentificationTypesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Integer  $identificationTypeId
+     * @param  Integer  $contractTypeId
      * @return \Illuminate\Http\Response
      */
-    public function show($identificationTypeId)
+    public function show($contractTypeId)
     {
-        print_r("show" . $identificationTypeId);
+        print_r("show" . $contractTypeId);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Integer  $identificationTypeId
+     * @param  Integer  $contractTypeId
      * @return \Illuminate\Http\Response
      */
-    public function edit($identificationTypeId)
+    public function edit($contractTypeId)
     {
-        print_r("edit" . $identificationTypeId);
+        print_r("edit" . $contractTypeId);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  Integer  $identificationTypeId
+     * @param  Integer  $contractTypeId
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $identificationTypeId)
+    public function update(Request $request, $contractTypeId)
     {
-        print_r("update" . $request . $identificationTypeId);
+        print_r("update" . $request . $contractTypeId);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Integer $identificationTypeId
+     * @param  Integer $contractTypeId
      * @return \Illuminate\Http\Response
      */
-    public function destroy($identificationTypeId)
+    public function destroy($contractTypeId)
     {
-        print_r("destroy" . $identificationTypeId);
+        print_r("destroy" . $contractTypeId);
     }
 }

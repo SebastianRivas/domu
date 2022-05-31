@@ -22,9 +22,11 @@ class UserTypesController extends Controller
     {
         $userTypes = UserTypes::all();
 
-        return Inertia::render('', [
-            'userTypesArr' => $userTypes,
-        ]);
+        print_r("index" . $userTypes);
+        
+        // return Inertia::render('', [
+        //     'userTypesArr' => $userTypes,
+        // ]);
     }
 
     /**

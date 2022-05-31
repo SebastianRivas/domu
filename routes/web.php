@@ -8,6 +8,12 @@ use App\Http\Controllers\ProfilesController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContractController;
+use App\Http\Controllers\UserTypesController;
+use App\Http\Controllers\IdentificationTypesController;
+use App\Http\Controllers\PropertyTypesController;
+use App\Http\Controllers\EventTypesController;
+use App\Http\Controllers\StatusTypesController;
+use App\Http\Controllers\ContractTypesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +72,30 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('masterTables', function () {
         return Inertia::render('MasterTables'); 
     })->name('masterTables.index');
+
+    Route::get('masterTables/statusTypes', 
+        [StatusTypesController::class, 'index']  
+    )->name('masterTables.status');
+
+    Route::get('masterTables/userTypes',  
+        [UserTypesController::class, 'index'] 
+    )->name('masterTables.users');
+
+    Route::get('masterTables/identificationTypes', 
+        [IdentificationTypesController::class, 'index'] 
+    )->name('masterTables.identifications');
+
+    Route::get('masterTables/contractTypes', 
+        [ContractTypesController::class, 'index']  
+    )->name('masterTables.contracts');
+
+    Route::get('masterTables/propertyTypes', 
+        [PropertyTypesController::class, 'index'] 
+    )->name('masterTables.properties');
+
+    Route::get('masterTables/eventTypes', 
+        [EventTypesController::class, 'index'] 
+    )->name('masterTables.events');
 
     // Properties    
     Route::get('properties/index', 
