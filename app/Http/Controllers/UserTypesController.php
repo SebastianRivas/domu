@@ -20,13 +20,11 @@ class UserTypesController extends Controller
      */
     public function index()
     {
-        $userTypes = UserTypes::all();
-
-        print_r("index" . $userTypes);
+        $userTypes = UserTypes::paginate(10);
         
-        // return Inertia::render('', [
-        //     'userTypesArr' => $userTypes,
-        // ]);
+        return Inertia::render('UserTypes', [
+            'userTypesArr' => $userTypes,
+        ]);
     }
 
     /**

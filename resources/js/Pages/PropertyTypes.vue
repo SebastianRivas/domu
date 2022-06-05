@@ -1,20 +1,21 @@
 <script setup>
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
+import Pagination from '@/Components/Pagination.vue';
 import { Head } from '@inertiajs/inertia-vue3';
 import { Link } from '@inertiajs/inertia-vue3';
 
 defineProps({
-    propertiesArr: Object,
+    propertyTypesArr: Object,
 })
 </script>
 
 <template>
-    <Head title="Properties" />
+    <Head title="PropertyTypes" />
 
     <BreezeAuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Properties
+                Property Types
             </h2>
         </template>
 
@@ -37,41 +38,38 @@ defineProps({
                                     </form>
                                 </div>
                             </div>
+
                             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
                                         <th scope="col" class="px-6 py-3">
-                                            Property Name
+                                            Name
                                         </th>
                                         <th scope="col" class="px-6 py-3">
-                                            Location
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            Owner Name
+                                            Description
                                         </th>
                                         <th scope="col" class="px-6 py-3">
                                             Actions
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody v-if="propertiesArr.data.length > 0">
-                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" v-for="property in propertiesArr.data">
-                                        <td class="px-6 py-4"> {{ property.property_name }} </td>
-                                        <td class="px-6 py-4"> {{ property.property_location }} </td>
-                                        <td class="px-6 py-4"> {{ property.user_first_name }} {{ property.user_last_name }} </td>
+                                <tbody v-if="propertyTypesArr.data.length > 0">
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" v-for="propertyType in propertyTypesArr.data">
+                                        <td class="px-6 py-4"> {{ propertyType.name }} </td>
+                                        <td class="px-6 py-4"> {{ propertyType.description }} </td>
                                         <tr>
                                             <td class="px-6 py-4 text-right">
-                                                <Link :href="route('properties.show', { property_id: property.property_id })" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                <Link class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                                                     View
                                                 </Link>
                                             </td>
                                             <td class="px-6 py-4 text-right">
-                                                <Link :href="route('properties.edit', { property_id: property.property_id })" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                <Link class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                                                     Edit
                                                 </Link>
                                             </td>
                                             <td class="px-6 py-4 text-right">
-                                                <Link :href="route('properties.destroy', { property_id: property.property_id })" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                <Link class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                                                     Delete
                                                 </Link>
                                             </td>
@@ -86,20 +84,20 @@ defineProps({
                         <div class="flex flex-col items-center">
                             <!-- Help text -->
                             <span class="text-sm text-gray-700 dark:text-gray-400">
-                                Showing <span class="font-semibold text-gray-900 dark:text-white">{{ propertiesArr.to }}</span> of <span class="font-semibold text-gray-900 dark:text-white">{{ propertiesArr.total }}</span> Entries
+                                Showing <span class="font-semibold text-gray-900 dark:text-white">{{ propertyTypesArr.to }}</span> of <span class="font-semibold text-gray-900 dark:text-white">{{ propertyTypesArr.total }}</span> Entries
                             </span>
 
                             <div class="inline-flex mt-2 xs:mt-0">
-                                <Pagination class="mt-6" :links="propertiesArr.links"> 
+                                <Pagination class="mt-6" :links="propertyTypesArr.links"> 
 
                                 </Pagination>
                             </div>
                         </div>
                         <br>
                         <div class="flex flex-col items-center">
-                            <Link :href="route('properties.create')">
+                            <Link>
                                 <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
-                                    New Property
+                                    New Property Type
                                 </button>
                             </Link>
                         </div>

@@ -20,13 +20,11 @@ class IdentificationTypesController extends Controller
      */
     public function index()
     {
-        $identificationTypes = IdentificationTypes::all();
+        $identificationTypes = IdentificationTypes::paginate(10);
 
-        print_r("index" . $identificationTypes);
-
-        // return Inertia::render('', [
-        //     'identificationTypesArr' => $identificationTypes,
-        // ]);
+        return Inertia::render('IdentificationTypes', [
+            'identificationTypesArr' => $identificationTypes,
+        ]);
     }
 
     /**

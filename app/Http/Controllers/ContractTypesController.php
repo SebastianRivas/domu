@@ -20,13 +20,11 @@ class ContractTypesController extends Controller
      */
     public function index()
     {
-        $contractTypes = ContractTypes::all();
+        $contractTypes = ContractTypes::paginate(10);
 
-        print_r("index" . $contractTypes);
-
-        // return Inertia::render('', [
-        //     'contractTypesArr' => $contractTypes,
-        // ]);
+        return Inertia::render('ContractTypes', [
+            'contractTypesArr' => $contractTypes,
+        ]);
     }
 
     /**

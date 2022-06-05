@@ -20,13 +20,11 @@ class StatusTypesController extends Controller
      */
     public function index()
     {
-        $statusTypes = StatusTypes::all();
+        $statusTypes = StatusTypes::paginate(10);
 
-        print_r("index" . $statusTypes);
-
-        // return Inertia::render('', [
-        //     'statusTypesArr' => $statusTypes,
-        // ]);
+        return Inertia::render('StatusTypes', [
+            'statusTypesArr' => $statusTypes,
+        ]);
     }
 
     /**

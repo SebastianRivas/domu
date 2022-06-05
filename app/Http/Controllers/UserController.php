@@ -40,7 +40,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        print_r("create");
+        return Inertia::render('NewUser');
     }
 
     /**
@@ -62,7 +62,17 @@ class UserController extends Controller
      */
     public function show($userId)
     {
-        print_r("show" . $userId);
+        $user = DB::table('users')
+            ->join('profiles', 'users.id', '=', 'profiles.user_id')
+            ->join('user_types', 'users.user_type', '=', 'user_types.id')
+            ->where('users.id', '=', $userId)
+            ->orderBy('users.created_at', 'asc')
+            ->select('users.id as id', 'users.email as email', 'profiles.first_name as first_name', 'profiles.last_name as last_name', 'profiles.identification_number as identification_number', 'profiles.age as age', 'profiles.phone_number as phone_number', 'user_types.name as user_type')
+            ->get();
+
+        return Inertia::render('ViewUser', [
+            'userData' => $user,
+        ]);
     }
 
     /**
@@ -73,7 +83,17 @@ class UserController extends Controller
      */
     public function edit($userId)
     {
-        print_r("edit" . $userId);
+        $user = DB::table('users')
+            ->join('profiles', 'users.id', '=', 'profiles.user_id')
+            ->join('user_types', 'users.user_type', '=', 'user_types.id')
+            ->where('users.id', '=', $userId)
+            ->orderBy('users.created_at', 'asc')
+            ->select('users.id as id', 'users.email as email', 'profiles.first_name as first_name', 'profiles.last_name as last_name', 'profiles.identification_number as identification_number', 'profiles.age as age', 'profiles.phone_number as phone_number', 'user_types.name as user_type')
+            ->get();
+
+        return Inertia::render('ViewUser', [
+            'userData' => $user,
+        ]);
     }
 
     /**

@@ -20,13 +20,11 @@ class PropertyTypesController extends Controller
      */
     public function index()
     {
-        $propertyTypes = PropertyTypes::all();
+        $propertyTypes = PropertyTypes::paginate(10);
 
-        print_r("index" . $propertyTypes);
-
-        // return Inertia::render('', [
-        //     'propertyTypesArr' => $propertyTypes,
-        // ]);
+        return Inertia::render('PropertyTypes', [
+            'propertyTypesArr' => $propertyTypes,
+        ]);
     }
 
     /**

@@ -20,13 +20,11 @@ class EventTypesController extends Controller
      */
     public function index()
     {
-        $eventTypes = EventTypes::all();
+        $eventTypes = EventTypes::paginate(10);
 
-        print_r("index" . $eventTypes);
-
-        // return Inertia::render('', [
-        //     'eventTypesArr' => $eventTypes,
-        // ]);
+        return Inertia::render('EventTypes', [
+            'eventTypesArr' => $eventTypes,
+        ]);
     }
 
     /**
