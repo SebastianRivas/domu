@@ -68,9 +68,12 @@ defineProps({
                     <div class="w-sm">
                         <img class="w-64" src="https://images01.nicepage.com/c461c07a441a5d220e8feb1a/a17abde8d83650a582a28432/users-with-speech-bubbles-vector_53876-82250.jpg" alt="" />
                         <div class="mt-4 text-yellow-600 text-center">
-                            <h1 class="text-xl font-bold">History</h1>
+                            <h1 class="text-xl font-bold">Our Properties</h1>
                             <p class="mt-4 text-gray-600">Pretium lectus quam id leo in vitae turpis. Mattis pellentesque id nibh tortor id.</p>
-                            <button class="mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200">MORE</button>
+                            <p>
+                                <br>
+                                <a :href="route('public.property')" class="mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200">MORE</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -80,9 +83,12 @@ defineProps({
                     <div class="w-sm">
                         <img class="w-64" src="https://images01.nicepage.com/c461c07a441a5d220e8feb1a/3b242447f922540fbe750cab/fdf.jpg" alt="" />
                         <div class="mt-4 text-yellow-600 text-center">
-                            <h1 class="text-xl font-bold">Mission</h1>
+                            <h1 class="text-xl font-bold">Services</h1>
                             <p class="mt-4 text-gray-600">Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Risus feugiat.</p>
-                            <button class="mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200">MORE</button>
+                            <p>
+                                <br>
+                                <a href="" class="mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200">MORE</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -94,8 +100,11 @@ defineProps({
                         <div class="mt-4 text-yellow-600 text-center">
                             <h1 class="text-xl font-bold">Contact Us</h1>
                             <p class="mt-4 text-gray-600">Nisl purus in mollis nunc sed id semper. Rhoncus aenean vel elit scelerisque mauris.</p>
-                            <button class="mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200">MORE</button>
-                        </div>
+                            <p>
+                                <br>
+                                <a href="" class="mt-8 mb-4 py-2 px-14 rounded-full bg-yellow-600 text-white tracking-widest hover:bg-yellow-500 transition duration-200">MORE</a>
+                            </p>
+                            </div>
                     </div>
                 </div>
             </div>

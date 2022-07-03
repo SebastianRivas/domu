@@ -34,7 +34,7 @@ class IdentificationTypesController extends Controller
      */
     public function create()
     {
-        print_r("create");
+        return Inertia::render('NewIdentificationType');
     }
 
     /**
@@ -56,7 +56,7 @@ class IdentificationTypesController extends Controller
      */
     public function show($identificationTypeId)
     {
-        print_r("show" . $identificationTypeId);
+        return Inertia::render('ViewIdentificationType');
     }
 
     /**
@@ -67,7 +67,7 @@ class IdentificationTypesController extends Controller
      */
     public function edit($identificationTypeId)
     {
-        print_r("edit" . $identificationTypeId);
+        return Inertia::render('EditIdentificationType');
     }
 
     /**

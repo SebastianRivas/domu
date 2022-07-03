@@ -34,7 +34,7 @@ class StatusTypesController extends Controller
      */
     public function create()
     {
-        print_r("create");
+        return Inertia::render('NewStatusType');
     }
 
     /**
@@ -56,7 +56,7 @@ class StatusTypesController extends Controller
      */
     public function show($statusTypeId)
     {
-        print_r("show" . $statusTypeId);
+        return Inertia::render('ViewStatusType');
     }
 
     /**
@@ -67,7 +67,7 @@ class StatusTypesController extends Controller
      */
     public function edit($statusTypeId)
     {
-        print_r("edit" . $statusTypeId);
+        return Inertia::render('EditStatusType');
     }
 
     /**

@@ -34,7 +34,7 @@ class EventTypesController extends Controller
      */
     public function create()
     {
-        print_r("create");
+        return Inertia::render('NewEventType');
     }
 
     /**
@@ -56,7 +56,7 @@ class EventTypesController extends Controller
      */
     public function show($eventTypeId)
     {
-        print_r("show" . $eventTypeId);
+        return Inertia::render('ViewEventType');
     }
 
     /**
@@ -67,7 +67,7 @@ class EventTypesController extends Controller
      */
     public function edit($eventTypeId)
     {
-        print_r("edit" . $eventTypeId);
+        return Inertia::render('EditEventType');
     }
 
     /**

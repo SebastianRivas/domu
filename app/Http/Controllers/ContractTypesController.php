@@ -34,7 +34,7 @@ class ContractTypesController extends Controller
      */
     public function create()
     {
-        print_r("create");
+        return Inertia::render('NewContractType');
     }
 
     /**
@@ -56,7 +56,7 @@ class ContractTypesController extends Controller
      */
     public function show($contractTypeId)
     {
-        print_r("show" . $contractTypeId);
+        return Inertia::render('ViewContractType');
     }
 
     /**
@@ -67,7 +67,7 @@ class ContractTypesController extends Controller
      */
     public function edit($contractTypeId)
     {
-        print_r("edit" . $contractTypeId);
+        return Inertia::render('EditContractType');
     }
 
     /**

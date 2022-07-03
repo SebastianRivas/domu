@@ -59,17 +59,17 @@ defineProps({
                                         <td class="px-6 py-4"> {{ eventType.description }} </td>
                                         <tr>
                                             <td class="px-6 py-4 text-right">
-                                                <Link class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                <Link :href="route('masterTables.events.show', { eventType_id: eventType.id })" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                                                     View
                                                 </Link>
                                             </td>
                                             <td class="px-6 py-4 text-right">
-                                                <Link class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                <Link :href="route('masterTables.events.edit', { eventType_id: eventType.id })" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                                                     Edit
                                                 </Link>
                                             </td>
                                             <td class="px-6 py-4 text-right">
-                                                <Link class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                <Link :href="route('masterTables.events.destroy', { eventType_id: eventType.id })" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                                                     Delete
                                                 </Link>
                                             </td>
@@ -95,7 +95,7 @@ defineProps({
                         </div>
                         <br>
                         <div class="flex flex-col items-center">
-                            <Link>
+                            <Link :href="route('masterTables.events.create')">
                                 <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
                                     New Event Type
                                 </button>

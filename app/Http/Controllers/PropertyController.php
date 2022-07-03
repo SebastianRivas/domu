@@ -34,6 +34,19 @@ class PropertyController extends Controller
     }
 
     /**
+     * Display a listing of the public resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function publicIndex() 
+    {
+        return Inertia::render('OurProperties', [
+            'canLogin' => Route::has('login'),
+            'canRegister' => Route::has('register'),
+        ]);  
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -63,6 +76,20 @@ class PropertyController extends Controller
     public function show($propertyId)
     {
         print_r("show" . $propertyId);
+    }
+
+    /**
+     * Display the specified public resource.
+     *
+     * @param  Integer  $propertyId
+     * @return \Illuminate\Http\Response
+     */
+    public function publicShow($propertyId) 
+    {
+        return Inertia::render('ViewProperty', [
+            'canLogin' => Route::has('login'),
+            'canRegister' => Route::has('register'),
+        ]);
     }
 
     /**

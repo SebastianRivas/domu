@@ -91,7 +91,7 @@ class UserController extends Controller
             ->select('users.id as id', 'users.email as email', 'profiles.first_name as first_name', 'profiles.last_name as last_name', 'profiles.identification_number as identification_number', 'profiles.age as age', 'profiles.phone_number as phone_number', 'user_types.name as user_type')
             ->get();
 
-        return Inertia::render('ViewUser', [
+        return Inertia::render('EditUser', [
             'userData' => $user,
         ]);
     }

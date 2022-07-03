@@ -206,36 +206,6 @@ defineProps({
                                         </div>
                                     </div>
                                 </div>
-
-                                <hr />
-                                <div class="md:inline-flex w-full space-y-4 md:space-y-0 p-8 text-gray-500 items-center">
-                                    <h2 class="md:w-4/12 max-w-sm mx-auto">Change password</h2>
-
-                                    <div class="md:w-5/12 w-full md:pl-9 max-w-sm mx-auto space-y-5 md:inline-flex pl-2">
-                                        <div class="w-full inline-flex border-b">
-                                            <div class="w-1/12 pt-2">
-                                                <svg
-                                                    fill="none"
-                                                    class="w-6 text-gray-400 mx-auto"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                >
-                                                <path
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                                                />
-                                                </svg>
-                                            </div>
-                                            <input
-                                                type="password"
-                                                class="w-11/12 border-gray-300 focus:border-yellow-600 focus:ring focus:ring-yellow-500 focus:outline-none focus:text-gray-600 p-2 ml-4"
-                                                placeholder="New Password"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

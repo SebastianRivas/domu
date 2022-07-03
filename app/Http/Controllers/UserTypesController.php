@@ -34,7 +34,7 @@ class UserTypesController extends Controller
      */
     public function create()
     {
-        print_r("create");
+        return Inertia::render('NewUserType');
     }
 
     /**
@@ -56,7 +56,7 @@ class UserTypesController extends Controller
      */
     public function show($userTypeId)
     {
-        print_r("show" . $userTypeId);
+        return Inertia::render('ViewUserType');
     }
 
     /**
@@ -67,7 +67,7 @@ class UserTypesController extends Controller
      */
     public function edit($userTypeId)
     {
-        print_r("edit" . $userTypeId);
+        return Inertia::render('EditUserType');
     }
 
     /**

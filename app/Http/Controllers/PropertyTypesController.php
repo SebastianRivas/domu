@@ -34,7 +34,7 @@ class PropertyTypesController extends Controller
      */
     public function create()
     {
-        print_r("create");
+        return Inertia::render('NewPropertyType');
     }
 
     /**
@@ -56,7 +56,7 @@ class PropertyTypesController extends Controller
      */
     public function show($propertyTypeId)
     {
-        print_r("show" . $propertyTypeId);
+        return Inertia::render('ViewPropertyType');
     }
 
     /**
@@ -67,7 +67,7 @@ class PropertyTypesController extends Controller
      */
     public function edit($propertyTypeId)
     {
-        print_r("edit" . $propertyTypeId);
+        return Inertia::render('EditPropertyType');
     }
 
     /**
