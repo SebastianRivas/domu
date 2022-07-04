@@ -53,7 +53,7 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        print_r("create");
+        return Inertia::render('NewProperty');
     }
 
     /**
@@ -75,7 +75,7 @@ class PropertyController extends Controller
      */
     public function show($propertyId)
     {
-        print_r("show" . $propertyId);
+        return Inertia::render('ViewProperty');
     }
 
     /**
@@ -86,7 +86,7 @@ class PropertyController extends Controller
      */
     public function publicShow($propertyId) 
     {
-        return Inertia::render('ViewProperty', [
+        return Inertia::render('ViewOurProperty', [
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
         ]);
@@ -100,7 +100,7 @@ class PropertyController extends Controller
      */
     public function edit($propertyId)
     {
-        print_r("edit" . $propertyId);
+        return Inertia::render('EditProperty');
     }
 
     /**

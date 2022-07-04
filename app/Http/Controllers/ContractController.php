@@ -26,7 +26,7 @@ class ContractController extends Controller
             ->join('property_details', 'properties.id', '=', 'property_details.property_id')
             ->join('profiles', 'properties.user_id', '=', 'profiles.user_id')
             ->orderBy('contracts.created_at', 'asc')
-            ->select('contracts.id as contract_id', 'property_details.name as property_name', 'contracts.serial as contract_serial', 'contracts.date as contract_date', 'profiles.first_name as user_first_name', 'profiles.last_name as user_last_name')
+            ->select('contracts.id as contract_id', 'property_details.name as property_name', 'contracts.serial as contract_serial', 'contracts.created_at as contract_date', 'profiles.first_name as user_first_name', 'profiles.last_name as user_last_name')
             ->paginate(10);
 
         return Inertia::render('Purchaser', [
@@ -41,7 +41,7 @@ class ContractController extends Controller
      */
     public function create()
     {
-        print_r("create");
+        return Inertia::render('NewContract');
     }
 
     /**
@@ -63,7 +63,7 @@ class ContractController extends Controller
      */
     public function show($propertyId)
     {
-        print_r("show" . $propertyId);
+        return Inertia::render('ViewContract');
     }
 
     /**
@@ -74,7 +74,7 @@ class ContractController extends Controller
      */
     public function edit($propertyId)
     {
-        print_r("edit" . $propertyId);
+        return Inertia::render('EditContract');
     }
 
     /**

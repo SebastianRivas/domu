@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->integer('property_id');
             $table->string('serial');
-            $table->text('url');
-            $table->date('date');
+            $table->string('observations');
             $table->timestamps();
 
+            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('property_id')->references('id')->on('properties');
         });
     }

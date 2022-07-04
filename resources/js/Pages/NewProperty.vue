@@ -3,18 +3,40 @@ import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
 import { Head } from '@inertiajs/inertia-vue3';
 import { Link } from '@inertiajs/inertia-vue3';
 import { useForm } from '@inertiajs/inertia-vue3';
+
+const form = useForm({
+    user_id: '',
+    property_type_id: '',
+    name: '', 
+    description: '', 
+    price: '', 
+    room: '', 
+    bath: '', 
+    area: '',
+    garaje: '', 
+    year_build: '', 
+    location: '', 
+    photo_url: '',
+    video_url: '',
+});
+
+const submit = () => {
+    form.post(route(''))
+};
+
 </script>
 
 <template>
-    <Head title="ViewProperty" />
+    <Head title="NewProperty" />
 
     <BreezeAuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                View Property
+                New Property
             </h2>
         </template>
 
+        <form @submit.prevent="submit">
             <div class="py-12">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -371,11 +393,34 @@ import { useForm } from '@inertiajs/inertia-vue3';
                                             </div>
                                         </div>
                                     </div>
+
+                                    <hr />
+                                    <div class="md:inline-flex w-full space-y-4 md:space-y-0 p-8 text-gray-500 items-center">
+                                        <div class="md:w-3/12 text-center md:pl-6">
+                                            <button class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-yellow-700 hover:bg-yellow-800 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 py-2 px-4 inline-flex items-center focus:outline-none md:float-right">
+                                                <svg
+                                                    fill="none"
+                                                    class="w-4 text-white mr-2"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                                                />
+                                                </svg>
+                                                Create
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </form>
     </BreezeAuthenticatedLayout>
 </template>
